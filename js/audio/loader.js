@@ -5,7 +5,7 @@ function loadSong() {
     var count = 0;
     prefix = window.location.href.split('/')[0] + '//' + window.location.hostname
             + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
-    var path = prefix + '/songs.csv';
+    var path = 'https://github.com/FromLegoUniverse/vis.js/blob/gh-pages/songs.csv'; //var path = prefix + '/songs.csv';
     $.ajax({
         url:        path,
         success:    csv => {
