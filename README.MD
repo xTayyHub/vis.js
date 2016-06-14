@@ -1,3 +1,5 @@
+NOTE: This was modified for personal use.
+
 # vis.js
 
 vis.js is a visualizer for music files written in Javascript. Technologies utilized are [three.js](http://threejs.org/)
