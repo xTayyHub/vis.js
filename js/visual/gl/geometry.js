@@ -1,6 +1,5 @@
 var particleCount = (($(document).width() * $(document).height()) / (1920 * 1080)) * baseParticleCount;
 
-THREE.ImageUtils.crossOrigin = '';
 
 //TODO: split main system into foreground and background particles
 var particles = new THREE.Geometry();
@@ -9,6 +8,7 @@ var bokeh = new THREE.Geometry();
 
 
 textureLoader = new THREE.TextureLoader();
+textureLoader.crossOrigin = '';
 
 
 var stdTexure = textureLoader.load(
