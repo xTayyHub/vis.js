@@ -7,6 +7,8 @@ if (!window.AudioContext) {
 
 var color;
 
+var baseURL = "https://github.com/FromLegoUniverse/vis.js"; //This is a personal modification.
+
 var spectrumWidth = 1568 * resRatio;
 spectrumSpacing = 7 * resRatio;
 var barWidth = (spectrumWidth + spectrumSpacing) / spectrumSize - spectrumSpacing;
