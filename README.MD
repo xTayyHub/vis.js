@@ -1,8 +1,8 @@
 NOTE: This was modified for personal use.
 
 Viewing:
-(Development) https://rawgit.com/FromLegoUniverse/vis.js/gh-pages/index.html
-(Production) https://cdn.rawgit.com/FromLegoUniverse/vis.js/gh-pages/index.html
+<br>(Development) https://rawgit.com/FromLegoUniverse/vis.js/gh-pages/index.html
+<br>(Production) https://cdn.rawgit.com/FromLegoUniverse/vis.js/gh-pages/index.html
 
 # vis.js (FromLegoUniverse/TheNexusAvenger's Modifications)
 
