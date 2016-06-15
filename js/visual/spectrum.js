@@ -59,7 +59,7 @@ function drawSpectrum(array) {
     if (lastFrameSampled != currentSampleFrame) { 
         lastFrameSampled = currentSampleFrame;
         
-        compiledSongData = compiledSongData + "\n\t[" + currentSampleFrame + "]{"; 
+        compiledSongData = compiledSongData + "\n\t[" + currentSampleFrame + "] = {"; 
         for (var i = 0; i < spectrumSize; i++) {
             compiledSongData = compiledSongData + "" + array[i] + ","; 
         }
