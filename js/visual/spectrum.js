@@ -32,6 +32,7 @@ function handleAudio() {
 
 var spectrumAnimation = "phase_1";
 var spectrumAnimationStart = 0;
+var lastFrameSampled = 0;
 
 function drawSpectrum(array) {
     if (isPlaying) {
@@ -51,7 +52,21 @@ function drawSpectrum(array) {
     ctx.shadowBlur = spectrumShadowBlur;
     ctx.shadowOffsetX = spectrumShadowOffsetX;
     ctx.shadowOffsetY = spectrumShadowOffsetY;
-
+    
+    var canRecordData = false
+    var currentSampleFrame = Math.round((now-started)/60);
+    
+    if (lastFrameSampled != currentSampleFrame) { 
+        lastFrameSampled = currentSampleFrame;
+        console.log("SAMPLED FRAME " + currentSampleFrame);
+        
+        compiledSongData = compiledSongData + "\n\t[" + currentSampleFrame + "]{"; 
+        for (var i = 0; i < spectrumSize; i++) {
+            compiledSongData = compiledSongData + "" + array[i] + ","; 
+        }
+        compiledSongData = compiledSongData + "},"; 
+    }
+        
     if (spectrumAnimation == "phase_1") {
         var ratio = (now - started) / 500;
         
@@ -77,11 +92,9 @@ function drawSpectrum(array) {
         }
     } else if (spectrumAnimation == "phase_3") {
         var ratio = (now - spectrumAnimationStart) / 1000;
-        var canRecordData = false
-        console.log(Math.round((now-started)/60));
+        
         
         // drawing pass
-        if (canRecordData == true) { compiledSongData = compiledSongData + "\n\t{"; }
         for (var i = 0; i < spectrumSize; i++) {
             var value = array[i];
             
@@ -94,10 +107,9 @@ function drawSpectrum(array) {
                 value = 2 * resRatio;
             }
             
-            if (canRecordData == true) { compiledSongData = compiledSongData + "" + value + ","; }
             ctx.fillRect(i * (barWidth + spectrumSpacing), spectrumHeight - value, barWidth, value, value);
         }
-        if (canRecordData == true) { compiledSongData = compiledSongData + "},"; }
+        
     }
 
     ctx.clearRect(0, spectrumHeight, spectrumWidth, blockTopPadding);
