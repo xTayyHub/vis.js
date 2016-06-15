@@ -78,7 +78,7 @@ function drawSpectrum(array) {
     } else if (spectrumAnimation == "phase_3") {
         var ratio = (now - spectrumAnimationStart) / 1000;
         var canRecordData = false
-        console.log(now-started);
+        console.log((now-started)/60);
         
         // drawing pass
         if (canRecordData == true) { compiledSongData = compiledSongData + "\n\t{"; }
