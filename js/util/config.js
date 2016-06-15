@@ -2,6 +2,8 @@
 // runtime. Some are mutated internally after intialization, meaning changing
 // them at runtime may not work as expected.
 
+var baseURL = "https://github.com/FromLegoUniverse/vis.js"; //This is a personal modification.
+
 /* *********************** */
 /* * Audio node settings * */
 /* *********************** */
