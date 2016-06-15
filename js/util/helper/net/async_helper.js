@@ -12,6 +12,7 @@ function createCORSRequest(method, url){
 }
 
 function loadSound(url) {
+    console.log("REQUEST");
     var request = createCORSRequest('GET', url);
     request.responseType = 'arraybuffer';
 
