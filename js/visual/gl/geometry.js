@@ -6,6 +6,7 @@ var flecks = new THREE.Geometry();
 var bokeh = new THREE.Geometry();
 
 textureLoader = new THREE.TextureLoader();
+THREE.ImageUtils.crossOrigin = '';
 
 var stdTexure = textureLoader.load(
     baseURL + '/img/particle.png'
