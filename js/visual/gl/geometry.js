@@ -9,22 +9,19 @@ textureLoader = new THREE.TextureLoader();
 THREE.ImageUtils.crossOrigin = "use-credentials"; //TODO: This still doesn't allow images to load.
 
 
-/*var stdTexure = textureLoader.load(
+var stdTexure = textureLoader.load(
     baseURL + '/img/particle.png'
-)*/
-var stdTexure = THREE.ImageUtils.loadTexture(baseURL + '/img/particle.png');
+)
 stdTexure.minFilter = THREE.LinearFilter;
 
-/*var fleckTexture = textureLoader.load(
+var fleckTexture = textureLoader.load(
     baseURL + '/img/fleck.png'
-)*/
-var fleckTexture = THREE.ImageUtils.loadTexture(baseURL + '/img/fleck.png');
+)
 fleckTexture.minFilter = THREE.LinearFilter;
 
-/*var bokehTexture = textureLoader.load(
+var bokehTexture = textureLoader.load(
     baseURL + '/img/bokeh.png'
-)*/
-var bokehTexture = THREE.ImageUtils.loadTexture(baseURL + '/img/bokeh.png');
+)
 bokehTexture.minFilter = THREE.LinearFilter;
 
 var pMaterial = new THREE.PointsMaterial({
