@@ -7,21 +7,24 @@ var bokeh = new THREE.Geometry();
 
 textureLoader = new THREE.TextureLoader();
 THREE.ImageUtils.crossOrigin = "use-credentials";
-console.log("Cross Origin Enabled?");
+console.log("Cross Origin Enabled 2?");
 
-var stdTexure = textureLoader.load(
+/*var stdTexure = textureLoader.load(
     baseURL + '/img/particle.png'
-)
+)*/
+var stdTexure = THREE.ImageUtils.loadTexture(baseURL + '/img/fleck.png');
 stdTexure.minFilter = THREE.LinearFilter;
 
-var fleckTexture = textureLoader.load(
+/*var fleckTexture = textureLoader.load(
     baseURL + '/img/fleck.png'
-)
+)*/
+var fleckTexture = THREE.ImageUtils.loadTexture(baseURL + '/img/fleck.png');
 fleckTexture.minFilter = THREE.LinearFilter;
 
-var bokehTexture = textureLoader.load(
+/*var bokehTexture = textureLoader.load(
     baseURL + '/img/bokeh.png'
-)
+)*/
+var bokehTexture = THREE.ImageUtils.loadTexture(baseURL + '/img/fleck.png');
 bokehTexture.minFilter = THREE.LinearFilter;
 
 var pMaterial = new THREE.PointsMaterial({
