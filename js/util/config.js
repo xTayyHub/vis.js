@@ -2,7 +2,11 @@
 // runtime. Some are mutated internally after intialization, meaning changing
 // them at runtime may not work as expected.
 
-var baseURL = "https://rawgit.com/FromLegoUniverse/vis.js/gh-pages"; //This is a personal modification.
+/* *********************** */
+/* * Personal Additions  * */
+/* *********************** */
+var baseURL = "https://rawgit.com/FromLegoUniverse/vis.js/gh-pages"; 
+var sampleRate = 60;
 
 /* *********************** */
 /* * Audio node settings * */
