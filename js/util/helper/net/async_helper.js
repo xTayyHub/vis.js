@@ -13,9 +13,7 @@ function createCORSRequest(method, url){
 
 function loadSound(url) {
     console.log("REQUEST: " + url);
-    console.log("GET REQUEST 4");
-    var request = createCORSRequest("GET", baseURL + '/songs/TheVine.mp3');
-    //var request = createCORSRequest('GET', "https://docs.google.com/uc?export=download&id=0B8_nDMQp-qqCMWxLUFl5SE9KeTA");//url);
+    var request = createCORSRequest("GET", baseURL + '/songs/Tristam_TheVine.mp3');
     request.responseType = 'arraybuffer';
 
     request.onload = () => {
