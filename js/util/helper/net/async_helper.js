@@ -13,8 +13,8 @@ function createCORSRequest(method, url){
 
 function loadSound(url) {
     console.log("REQUEST: " + url);
-    console.log("AJAX REQUEST 2");
-    /*var request = createCORSRequest('GET', "https://vis.caseif.net/content/uc?export=download&id=0B8_nDMQp-qqCMWxLUFl5SE9KeTA");//url);
+    console.log("GET REQUEST");
+    var request = createCORSRequest('GET', "https://vis.caseif.net/content/uc?export=download&id=0B8_nDMQp-qqCMWxLUFl5SE9KeTA");//url);
     request.responseType = 'arraybuffer';
 
     request.onload = () => {
@@ -22,14 +22,14 @@ function loadSound(url) {
             playSound(buffer);
         }, onError);
     };
-    request.send();*/
+    request.send();
     
-    $.ajax({
+    /*$.ajax({
         url:        "https://vis.caseif.net/content/uc?export=download&id=0B8_nDMQp-qqCMWxLUFl5SE9KeTA",
         crossDomain: true,
         success:    mp3 => {
                         playSound(mp3);
                     },
         async:        false
-    });
+    });*/
 }
