@@ -54,6 +54,8 @@ function playSound(buffer) {
 function setOnEnded() {
     bufferSource.onended = () => {
         if (started && isPlaying) {
+            compiledSongData  = compiledSongData  + "\n}"
+            download(compiledSongData, "Encoded Song Data.txt", "text/plain");
             location.reload(); // refresh when the song ends
         }
     };
