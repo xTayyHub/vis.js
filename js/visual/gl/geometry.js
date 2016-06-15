@@ -10,17 +10,17 @@ THREE.ImageUtils.crossOrigin = "use-credentials"; //TODO: This still doesn't all
 
 
 var stdTexure = textureLoader.load(
-    baseURL + '/img/particle.png'
+    "http://i.imgur.com/O2NQNvP.jpg"//baseURL + '/img/particle.png'
 )
 stdTexure.minFilter = THREE.LinearFilter;
 
 var fleckTexture = textureLoader.load(
-    baseURL + '/img/fleck.png'
+    "http://i.imgur.com/O2NQNvP.jpg"//baseURL + '/img/fleck.png'
 )
 fleckTexture.minFilter = THREE.LinearFilter;
 
 var bokehTexture = textureLoader.load(
-    baseURL + '/img/bokeh.png'
+    "http://i.imgur.com/O2NQNvP.jpg"//baseURL + '/img/bokeh.png'
 )
 bokehTexture.minFilter = THREE.LinearFilter;
 
