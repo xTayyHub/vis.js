@@ -29,7 +29,6 @@ $(document).keypress(event => {
                 console.log("ENABLING DOWNLOAD");
                 downloadSongData = true;
             }
-            }
         }
     }
 });
