@@ -1,6 +1,8 @@
 var song;
+var compiledSongData = "";
 
 function loadSong() {
+    compiledSongData = "return {";
     var songs = [];
     var count = 0;
     prefix = window.location.href.split('/')[0] + '//' + window.location.hostname
