@@ -54,7 +54,8 @@ function drawSpectrum(array) {
 
     if (spectrumAnimation == "phase_1") {
         var ratio = (now - started) / 500;
-
+        console.log(now-started);
+        
         ctx.fillRect(0, spectrumHeight - 2 * resRatio, (spectrumWidth/2) * ratio, 2 * resRatio);
         ctx.fillRect(spectrumWidth - (spectrumWidth/2) * ratio, spectrumHeight - 2 * resRatio, (spectrumWidth/2) * ratio, 2 * resRatio);
 
@@ -76,12 +77,14 @@ function drawSpectrum(array) {
             spectrumAnimationStart = now;
         }
     } else if (spectrumAnimation == "phase_3") {
+        var canRecordData = false
         var ratio = (now - spectrumAnimationStart) / 1000;
 
         // drawing pass
+        if (canRecordData == true) { compiledSongData = compiledSongData + "\n\t{"; }
         for (var i = 0; i < spectrumSize; i++) {
             var value = array[i];
-
+            
             // Used to smooth transiton between bar & full spectrum (lasts 1 sec)
             if (ratio < 1) {
                 value = value / (1 + 9 - 9 * ratio); 
@@ -90,9 +93,11 @@ function drawSpectrum(array) {
             if (value < 2 * resRatio) {
                 value = 2 * resRatio;
             }
-
+            
+            if (canRecordData == true) { compiledSongData = compiledSongData + "" + value + ","; }
             ctx.fillRect(i * (barWidth + spectrumSpacing), spectrumHeight - value, barWidth, value, value);
         }
+        if (canRecordData == true) { compiledSongData = compiledSongData + "},"; }
     }
 
     ctx.clearRect(0, spectrumHeight, spectrumWidth, blockTopPadding);
