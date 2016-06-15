@@ -1,3 +1,5 @@
+var downloadSongData = false;
+
 $(document).keypress(event => {
     if (event.which == KEY_P_UPPER || event.which == KEY_P_LOWER) {
         if (started) {
@@ -17,6 +19,17 @@ $(document).keypress(event => {
                 started = Date.now();
             }
             isPlaying = !isPlaying;
+        }
+    } else if (event.which == KEY_O_UPPER || event.which == KEY_O_LOWER) {
+        if (started) {
+            if (downloadSongData == true) {
+                console.log("DISABLING DOWNLOAD");
+                downloadSongData = false;
+            } else {
+                console.log("ENABLING DOWNLOAD");
+                downloadSongData = true;
+            }
+            }
         }
     }
 });
