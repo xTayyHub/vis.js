@@ -6,21 +6,20 @@ var flecks = new THREE.Geometry();
 var bokeh = new THREE.Geometry();
 
 textureLoader = new THREE.TextureLoader();
-THREE.ImageUtils.crossOrigin = ""; //TODO: This still doesn't allow images to load.
 
 
 var stdTexure = textureLoader.load(
-    "http://i.imgur.com/O2NQNvP.jpg"//baseURL + '/img/particle.png'
+    baseURL + '/img/particle.png'
 )
 stdTexure.minFilter = THREE.LinearFilter;
 
 var fleckTexture = textureLoader.load(
-    "http://i.imgur.com/O2NQNvP.jpg"//baseURL + '/img/fleck.png'
+   baseURL + '/img/fleck.png'
 )
 fleckTexture.minFilter = THREE.LinearFilter;
 
 var bokehTexture = textureLoader.load(
-    "http://i.imgur.com/O2NQNvP.jpg"//baseURL + '/img/bokeh.png'
+    baseURL + '/img/bokeh.png'
 )
 bokehTexture.minFilter = THREE.LinearFilter;
 
