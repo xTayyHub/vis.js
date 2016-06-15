@@ -1,11 +1,14 @@
 NOTE: This was modified for personal use.
 
-# vis.js
+Viewing:
+(Development) https://rawgit.com/FromLegoUniverse/vis.js/gh-pages/index.html
+(Production) https://cdn.rawgit.com/FromLegoUniverse/vis.js/gh-pages/index.html
 
-vis.js is a visualizer for music files written in Javascript. Technologies utilized are [three.js](http://threejs.org/)
-and [jQuery](https://jquery.com/). This project is inspired by the [Monstercat](https://youtube.com/Monstercat)
-visualizer.
+# vis.js (FromLegoUniverse/TheNexusAvenger's Modifications)
 
+vis.hs is a modifcation of the [version owned by caseof](https://github.com/FromLegoUniverse/vis.js) for the use of getting sound data for use on ROBLOX. This is a more speicalized version, and you should refer to the original if you are looking at this one.
+
+(Following was not modified as it is still relevant)
 ## Browser Support
 
 :heavy_check_mark: Google Chrome
