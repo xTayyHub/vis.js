@@ -6,8 +6,8 @@ var flecks = new THREE.Geometry();
 var bokeh = new THREE.Geometry();
 
 textureLoader = new THREE.TextureLoader();
-THREE.ImageUtils.crossOrigin = "use-credentials";
-console.log("Cross Origin Enabled 2?");
+THREE.ImageUtils.crossOrigin = "use-credentials"; //TODO: This still doesn't allow images to load.
+
 
 /*var stdTexure = textureLoader.load(
     baseURL + '/img/particle.png'
