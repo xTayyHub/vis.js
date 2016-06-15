@@ -8,17 +8,17 @@ var bokeh = new THREE.Geometry();
 textureLoader = new THREE.TextureLoader();
 
 var stdTexure = textureLoader.load(
-    './img/particle.png'
+    baseURL + '/img/particle.png'
 )
 stdTexure.minFilter = THREE.LinearFilter;
 
 var fleckTexture = textureLoader.load(
-    './img/fleck.png'
+    baseURL + '/img/fleck.png'
 )
 fleckTexture.minFilter = THREE.LinearFilter;
 
 var bokehTexture = textureLoader.load(
-    './img/bokeh.png'
+    baseURL + '/img/bokeh.png'
 )
 bokehTexture.minFilter = THREE.LinearFilter;
 
