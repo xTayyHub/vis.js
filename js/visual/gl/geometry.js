@@ -6,7 +6,7 @@ var flecks = new THREE.Geometry();
 var bokeh = new THREE.Geometry();
 
 textureLoader = new THREE.TextureLoader();
-THREE.ImageUtils.crossOrigin = "use-credentials"; //TODO: This still doesn't allow images to load.
+THREE.ImageUtils.crossOrigin = ""; //TODO: This still doesn't allow images to load.
 
 
 var stdTexure = textureLoader.load(
