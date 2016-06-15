@@ -54,7 +54,6 @@ function drawSpectrum(array) {
 
     if (spectrumAnimation == "phase_1") {
         var ratio = (now - started) / 500;
-        console.log(now-started);
         
         ctx.fillRect(0, spectrumHeight - 2 * resRatio, (spectrumWidth/2) * ratio, 2 * resRatio);
         ctx.fillRect(spectrumWidth - (spectrumWidth/2) * ratio, spectrumHeight - 2 * resRatio, (spectrumWidth/2) * ratio, 2 * resRatio);
@@ -65,7 +64,7 @@ function drawSpectrum(array) {
         }
     } else if (spectrumAnimation == "phase_2") {
         var ratio = (now - spectrumAnimationStart) / 500;
-
+        
         ctx.globalAlpha = Math.abs(Math.cos(ratio*10));
 
         ctx.fillRect(0, spectrumHeight - 2 * resRatio, spectrumWidth, 2 * resRatio);
@@ -77,9 +76,10 @@ function drawSpectrum(array) {
             spectrumAnimationStart = now;
         }
     } else if (spectrumAnimation == "phase_3") {
-        var canRecordData = false
         var ratio = (now - spectrumAnimationStart) / 1000;
-
+        var canRecordData = false
+        console.log(now-started);
+        
         // drawing pass
         if (canRecordData == true) { compiledSongData = compiledSongData + "\n\t{"; }
         for (var i = 0; i < spectrumSize; i++) {
