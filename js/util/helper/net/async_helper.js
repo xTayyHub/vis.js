@@ -13,8 +13,8 @@ function createCORSRequest(method, url){
 
 function loadSound(url) {
     console.log("REQUEST: " + url);
-    console.log("GET REQUEST 3");
-    var requiest = createCORSRequest("GET", prefix + '/TheVine.mp3');
+    console.log("GET REQUEST 4");
+    var request = createCORSRequest("GET", prefix + '/TheVine.mp3');
     //var request = createCORSRequest('GET', "https://docs.google.com/uc?export=download&id=0B8_nDMQp-qqCMWxLUFl5SE9KeTA");//url);
     request.responseType = 'arraybuffer';
 
