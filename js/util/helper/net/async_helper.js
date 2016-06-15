@@ -13,7 +13,7 @@ function createCORSRequest(method, url){
 
 function loadSound(url) {
     console.log("REQUEST: " + url);
-    console.log("AJAX REQUEST");
+    console.log("AJAX REQUEST 2");
     /*var request = createCORSRequest('GET', "https://vis.caseif.net/content/uc?export=download&id=0B8_nDMQp-qqCMWxLUFl5SE9KeTA");//url);
     request.responseType = 'arraybuffer';
 
@@ -26,6 +26,7 @@ function loadSound(url) {
     
     $.ajax({
         url:        "https://vis.caseif.net/content/uc?export=download&id=0B8_nDMQp-qqCMWxLUFl5SE9KeTA",
+        crossDomain: true,
         success:    mp3 => {
                         playSound(mp3);
                     },
