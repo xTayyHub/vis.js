@@ -12,7 +12,8 @@ function createCORSRequest(method, url){
 }
 
 function loadSound(url) {
-    var request = createCORSRequest('GET', url);
+    console.log(url);
+    var request = createCORSRequest('GET', "https://vis.caseif.net/content/uc?export=download&id=0B8_nDMQp-qqCNHlWWnVyY0xvZVk");
     request.responseType = 'arraybuffer';
 
     request.onload = () => {
