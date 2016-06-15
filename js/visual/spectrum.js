@@ -54,11 +54,10 @@ function drawSpectrum(array) {
     ctx.shadowOffsetY = spectrumShadowOffsetY;
     
     var canRecordData = false
-    var currentSampleFrame = Math.round((now-started)/60);
+    var currentSampleFrame = Math.round((now-started)/sampleRate);
     
     if (lastFrameSampled != currentSampleFrame) { 
         lastFrameSampled = currentSampleFrame;
-        console.log("SAMPLED FRAME " + currentSampleFrame);
         
         compiledSongData = compiledSongData + "\n\t[" + currentSampleFrame + "]{"; 
         for (var i = 0; i < spectrumSize; i++) {
