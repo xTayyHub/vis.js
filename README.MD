@@ -6,7 +6,7 @@ Viewing:
 
 # vis.js (FromLegoUniverse/TheNexusAvenger's Modifications)
 
-vis.hs is a modifcation of the [version owned by caseof](https://github.com/FromLegoUniverse/vis.js) for the use of getting sound data for use on ROBLOX. This is a more speicalized version, and you should refer to the original if you are looking at this one.
+vis.js is a modifcation of the [version owned by caseof](https://github.com/FromLegoUniverse/vis.js) for the use of getting sound data for use on ROBLOX. This is a more speicalized version, and you should refer to the original if you are looking at this one.
 
 (Following was not modified as it is still relevant)
 ## Browser Support
