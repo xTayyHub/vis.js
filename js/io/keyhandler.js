@@ -32,4 +32,3 @@ $(document).keypress(event => {
         }
     }
 });
-$('#download-value').html("Disabled<br>Press P to Pause");
