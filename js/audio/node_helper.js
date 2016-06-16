@@ -55,8 +55,10 @@ function setOnEnded() {
     bufferSource.onended = () => {
         if (started && isPlaying) {
             if (downloadSongData == true) {
+            	compiledSongData  = '<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4"> <External>null</External> <External>nil</External> <Item class="ModuleScript" referent="RBX040E8D154ACF48B48C3F54832CED08C8"><Properties> <Content name="LinkedSource"><null></null></Content> <string name="Name">ExportedSongData</string> <ProtectedString name="Source"><![CDATA[' + compiledSongData;
         	compiledSongData  = compiledSongData  + "\n}";
-        	download(compiledSongData, "Encoded Song Data.txt", "text/plain");
+            	compiledSongData  = compiledSongData +  ']]></ProtectedString> </Properties> </Item> </roblox>';
+        	download(compiledSongData, "Encoded Song Data.rbxmx", "text/plain");
             }
             location.reload(); // refresh when the song ends
         }
