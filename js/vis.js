@@ -54,7 +54,7 @@ $('#title').css('font-size', $('#title').css('font-size').replace('px', '') * re
 loadSong();
 setupAudioNodes();
 var prefix = window.location.href.split('/')[0] + '//' + window.location.hostname;
-loadSound(baseURL + "/songs/" + song.getFileId()); //loadSound(prefix + '/content/uc?export=download&id=' + song.getFileId()); // music file
+loadSound(baseURL + "/songs/" + song.getFileId());  // music file
 $('#songinfo').css('padding-top', (blockSize - $('#songinfo').height()) / 2);
 centerContent();
 initSpectrumHandler();
