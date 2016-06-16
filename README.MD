@@ -11,13 +11,16 @@ vis.js is a modifcation of the [version owned by caseof](https://github.com/From
 ## Re-using for yourself
 
 If you want to reproduce these files, do the following:
-1. Create a fork of this repositionary
-2. Go into /index.html, replace both cases of FromLegoUniverse (lines 21 and 32) with your GitHub username
-3. Go into /js/util/config.js and replace FromLegoUniverse (line 8) with your GitHub username
-4. Go into /README.MD and replace both case of FromLegoUniverse in the links(lines 4 and 5) with your GitHub username
-5. Keep the ference to the original under caseif. I just modified this, I didn't create it.
+<br>1. Create a fork of this repositionary
+<br>2. Go into /index.html, replace both cases of FromLegoUniverse (lines 21 and 32) with your GitHub username
+<br>3. Go into /js/util/config.js and replace FromLegoUniverse (line 8) with your GitHub username
+<br>4. Go into /README.MD and replace both case of FromLegoUniverse in the links(lines 4 and 5) with your GitHub username
+<br>5. Keep the reference to the original under caseif. I just modified this, I didn't create it.
 
 Note: This is meant to work with rawgit.com. You may need to modify teh links further in steps 2-4 to work with your domain or changed repositionary name.
+
+## Song Data Exporting
+The output of this modification is a ModuleScript in a .rbxmx file, which returns a table with each frame sample and an ordered set of the positions of the bars (in practice, the max they reach is ~240-250). This is meant to be directly inserted into Roblox Studio. If you need to change this to another format, the file is created in /js/audio.loader.js, /js/audio/node_helper.js, and /js/visual.js.
 
 (Following was not modified as it is still relevant)
 ## Browser Support
