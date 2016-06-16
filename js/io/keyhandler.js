@@ -32,3 +32,4 @@ $(document).keypress(event => {
         }
     }
 });
+$('#download-value').html("Disabled");
