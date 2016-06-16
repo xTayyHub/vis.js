@@ -22,12 +22,12 @@ $(document).keypress(event => {
         }
     } else if (event.which == KEY_O_UPPER || event.which == KEY_O_LOWER) {
         if (started) {
-            if (downloadSongData == true) {
-                console.log("DISABLING DOWNLOAD");
-                downloadSongData = false;
-            } else {
-                console.log("ENABLING DOWNLOAD");
+            if (downloadSongData != true) {
+                $('#download-value').html("Enabled");
                 downloadSongData = true;
+            } else {
+                $('#download-value').html("Disabled");
+                downloadSongData = false;
             }
         }
     }
