@@ -23,13 +23,13 @@ $(document).keypress(event => {
     } else if (event.which == KEY_O_UPPER || event.which == KEY_O_LOWER) {
         if (started) {
             if (downloadSongData != true) {
-                $('#download-value').html("Enabled");
+                $('#download-value').html("Enabled<br>Press P to Pause");
                 downloadSongData = true;
             } else {
-                $('#download-value').html("Disabled");
+                $('#download-value').html("Disabled<br>Press P to Pause");
                 downloadSongData = false;
             }
         }
     }
 });
-$('#download-value').html("Disabled");
+$('#download-value').html("Disabled<br>Press P to Pause");
