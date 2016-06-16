@@ -53,7 +53,6 @@ function drawSpectrum(array) {
     ctx.shadowOffsetX = spectrumShadowOffsetX;
     ctx.shadowOffsetY = spectrumShadowOffsetY;
     
-    var canRecordData = false
     var currentSampleFrame = Math.round((now-started)/sampleRate);
     
     if (lastFrameSampled != currentSampleFrame) { 
@@ -61,7 +60,11 @@ function drawSpectrum(array) {
         
         compiledSongData = compiledSongData + "\n\t[" + currentSampleFrame + "] = {"; 
         for (var i = 0; i < spectrumSize; i++) {
-            compiledSongData = compiledSongData + "" + array[i] + ","; 
+            if (roundExportedNumbers == true) {
+                compiledSongData = compiledSongData + "" + Math.round(array[i]) + ","; 
+            } else {
+                compiledSongData = compiledSongData + "" + array[i] + ","; 
+            }
         }
         compiledSongData = compiledSongData + "},"; 
     }
