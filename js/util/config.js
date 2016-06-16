@@ -5,8 +5,9 @@
 /* *********************** */
 /* * Personal Additions  * */
 /* *********************** */
-var baseURL = "https://rawgit.com/FromLegoUniverse/vis.js/gh-pages"; 
-var sampleRate = 60;
+var baseURL = "https://rawgit.com/FromLegoUniverse/vis.js/gh-pages";  //Base URL for requests for rawgit.
+var sampleRate = 60; //Frame rate of output. 60 is max for Roblox, but you can go higher/lower
+var roundExportedNumbers = true; //If true, rounds the exported numbers. Uses less file space if true, but percision is lost.
 
 /* *********************** */
 /* * Audio node settings * */
