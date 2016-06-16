@@ -46,6 +46,7 @@ function playSound(buffer) {
     $("body").addClass("playing");
     $('#spectrum_preloader').hide();
 	$('#loading-info').fadeOut(); // fades out the loading text
+    $('#download-value').html("Disabled<br>Press P to Pause");
     isPlaying = true;
     begun = true;
     started = Date.now();
