@@ -2,6 +2,8 @@ var KEY_UP = 38;
 var KEY_DOWN = 40;
 var KEY_P_UPPER = 80;
 var KEY_P_LOWER = 112;
+var KEY_O_UPPER = 79;
+var KEY_O_LOWER = 111;
 
 $(document).keydown(event => {
     if (event.which == KEY_UP) {
