@@ -1,4 +1,4 @@
-NOTE: This was modified for personal use.
+NOTE: This was modified for personal use, however can be used for getting data of audio files.
 
 Viewing:
 <br>(Development) https://rawgit.com/FromLegoUniverse/vis.js/gh-pages/index.html
