@@ -53,7 +53,7 @@ function drawSpectrum(array) {
     ctx.shadowOffsetX = spectrumShadowOffsetX;
     ctx.shadowOffsetY = spectrumShadowOffsetY;
     
-    var currentSampleFrame = Math.round((now-started)/sampleRate);
+    var currentSampleFrame = Math.round((now-started-0.5)/sampleRate);
     
     if (lastFrameSampled != currentSampleFrame) { 
         lastFrameSampled = currentSampleFrame;
